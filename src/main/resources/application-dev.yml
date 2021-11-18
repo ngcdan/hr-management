@@ -1,2 +1,15 @@
 server:
   port: 5000
+
+logging:
+  level:
+    com.jesse.training.spring:
+      debug
+#    org.springframework:
+#      debug
+
+spring:
+  h2:
+    console:
+      enabled: true
+      path: /h2

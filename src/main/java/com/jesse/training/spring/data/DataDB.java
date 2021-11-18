@@ -1,8 +1,7 @@
 package com.jesse.training.spring.data;
 
-import java.util.HashMap;
-import java.util.Map;
-import org.springframework.context.ApplicationContext;
+import java.util.*;
+import org.springframework.context.*;
 
 public class DataDB {
   static DataDB instance = null ;
@@ -20,7 +19,7 @@ public class DataDB {
       data = context.getAutowireCapableBeanFactory().createBean(type);
       dataMap.put(type.getName(), data);
     }
-    return data ;
+    return data;
   }
 
   static public void initDataDB(ApplicationContext context) {
