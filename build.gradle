@@ -30,6 +30,8 @@ dependencies {
 //    implementation "org.springframework.boot:spring-boot-starter-jetty"
     implementation "org.hibernate.validator:hibernate-validator:${hibernateValidatorVersion}"
 
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+
 
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
