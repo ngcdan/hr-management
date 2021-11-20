@@ -1,25 +1,30 @@
 package com.jesse.training.spring.service;
 
-import com.jesse.training.spring.entity.Account;
-import java.util.List;
-import org.springframework.stereotype.Component;
+import com.jesse.training.spring.entity.*;
+import com.jesse.training.spring.repository.*;
+import java.util.*;
+import org.springframework.beans.factory.annotation.*;
+import org.springframework.stereotype.*;
 
 @Component
 public class AccountLogic {
+
+  @Autowired
+  private AccountRepository repo;
 
   public List<Account> findAll() {
     return null;
   }
 
   public Account getAccount(String loginId) {
-    return null;
+    return repo.getAccountByLoginId(loginId);
   }
 
   public Account saveAccount(Account acc) {
-    return null;
+    return repo.save(acc);
   }
 
-  public int deleteAccountLoginById(String loginId) {
-    return 0;
+  public boolean deleteAccountLoginById(String loginId) {
+    return true;
   }
 }

@@ -1,13 +1,8 @@
 package com.jesse.training.spring.entity;
 
-import java.io.Serializable;
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.persistence.UniqueConstraint;
-import javax.validation.constraints.NotNull;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import javax.persistence.*;
+import javax.validation.constraints.*;
+import lombok.*;
 
 @Entity
 @Table(
@@ -19,7 +14,7 @@ import lombok.Setter;
   }
 )
 @NoArgsConstructor @Setter @Getter
-public class AccountMembership extends AbstractPersistable<Serializable>  {
+public class AccountMembership extends AbstractPersistable<Long>  {
   @NotNull
   public String loginId;
   @NotNull

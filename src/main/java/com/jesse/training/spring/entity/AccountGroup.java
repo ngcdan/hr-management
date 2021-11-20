@@ -1,17 +1,11 @@
 package com.jesse.training.spring.entity;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonInclude.Include;
-import java.io.Serializable;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Index;
-import javax.persistence.Table;
-import javax.persistence.UniqueConstraint;
-import javax.validation.constraints.NotNull;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.annotation.JsonInclude.*;
+import java.io.*;
+import javax.persistence.*;
+import javax.validation.constraints.*;
+import lombok.*;
 
 @Entity
 @Table(
@@ -25,7 +19,9 @@ import lombok.Setter;
 )
 @JsonInclude(Include.NON_NULL)
 @NoArgsConstructor @Getter @Setter
-public class AccountGroup extends AbstractPersistable<Serializable> {
+public class AccountGroup extends AbstractPersistable<Long> {
+  private static final long serialVersionUID = 1L;
+
   @NotNull
   private String name;
 

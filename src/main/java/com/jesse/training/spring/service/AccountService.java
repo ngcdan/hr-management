@@ -1,11 +1,9 @@
 package com.jesse.training.spring.service;
 
-import com.jesse.training.spring.entity.Account;
-import com.jesse.training.spring.entity.AccountGroup;
-import com.jesse.training.spring.entity.AccountMembership;
-import java.util.List;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import com.jesse.training.spring.entity.*;
+import java.util.*;
+import org.springframework.beans.factory.annotation.*;
+import org.springframework.stereotype.*;
 
 @Service
 public class AccountService {
@@ -27,7 +25,7 @@ public class AccountService {
     return accountLogic.saveAccount(acc);
   }
 
-  public int deleteAccountByLoginId(String loginId) {
+  public boolean deleteAccountByLoginId(String loginId) {
     return accountLogic.deleteAccountLoginById(loginId);
   }
 

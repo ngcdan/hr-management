@@ -1,10 +1,16 @@
 server:
   port: 5000
+  servlet:
+    contextPath: /
+    session:
+      timeout: 1800
+  jetty:
+    max-http-form-post-size: 200000B
 
 logging:
   level:
-    com.jesse.training.spring:
-      debug
+    com.jesse.training.spring: DEBUG
+    org.eclipse.jetty: INFO
 #    org.springframework:
 #      debug
 
@@ -13,3 +19,7 @@ spring:
     console:
       enabled: true
       path: /h2
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    database-platform: org.hibernate.dialect.H2Dialect

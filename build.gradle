@@ -22,12 +22,12 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
-    compile("org.springframework.boot:spring-boot-starter-web") {
-        exclude module: "spring-boot-starter-tomcat"
+    implementation("org.springframework.boot:spring-boot-starter-web") {
+//        exclude group: 'org.springframework.boot', module: "spring-boot-starter-tomcat"
     }
 
-    compile 'org.springframework.boot:spring-boot-starter-data-jpa'
-    compile "org.springframework.boot:spring-boot-starter-jetty"
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+//    implementation "org.springframework.boot:spring-boot-starter-jetty"
     implementation "org.hibernate.validator:hibernate-validator:${hibernateValidatorVersion}"
 
 
