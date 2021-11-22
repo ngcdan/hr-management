@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.*;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/rest/v1.0.0")
+@RequestMapping("/rest/v1.0.0/")
 public class AccountController {
   @Autowired
   private AccountService accountService;

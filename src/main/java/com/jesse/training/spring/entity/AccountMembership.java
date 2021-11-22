@@ -1,8 +1,12 @@
 package com.jesse.training.spring.entity;
 
-import javax.persistence.*;
-import javax.validation.constraints.*;
-import lombok.*;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
+import javax.validation.constraints.NotNull;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
 @Table(

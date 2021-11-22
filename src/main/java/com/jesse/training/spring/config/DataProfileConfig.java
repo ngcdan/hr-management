@@ -1,11 +1,15 @@
 package com.jesse.training.spring.config;
 
-import com.jesse.training.spring.data.*;
-import javax.annotation.*;
-import org.slf4j.*;
-import org.springframework.beans.factory.annotation.*;
-import org.springframework.context.*;
-import org.springframework.context.annotation.*;
+import com.jesse.training.spring.data.AccountData;
+import com.jesse.training.spring.data.DataDB;
+import com.jesse.training.spring.data.GroupData;
+import javax.annotation.PostConstruct;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
 
 @Profile("data")
 @Configuration

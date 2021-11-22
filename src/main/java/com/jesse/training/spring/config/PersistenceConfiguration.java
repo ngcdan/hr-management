@@ -1,14 +1,20 @@
 package com.jesse.training.spring.config;
 
-import javax.sql.*;
-import org.springframework.beans.factory.annotation.*;
-import org.springframework.boot.jdbc.*;
-import org.springframework.context.annotation.*;
-import org.springframework.data.jpa.repository.config.*;
+import javax.sql.DataSource;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.boot.jdbc.DataSourceBuilder;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
 @ComponentScan(basePackages = { "com.jesse.training.spring" })
 @EnableJpaRepositories(basePackages = {"com.jesse.training.spring.repository"})
+@EntityScan("com.jesse.training.spring.entity")
+@EnableTransactionManagement
 public class PersistenceConfiguration {
   @Bean
   public DataSource dataSource(

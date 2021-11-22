@@ -1,11 +1,15 @@
 package com.jesse.training.spring.entity;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.annotation.JsonInclude.*;
-import java.io.*;
-import javax.persistence.*;
-import javax.validation.constraints.*;
-import lombok.*;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import javax.persistence.Entity;
+import javax.persistence.Index;
+import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
+import javax.validation.constraints.NotNull;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
 @Table(
@@ -26,8 +30,8 @@ public class AccountGroup extends AbstractPersistable<Long> {
   private String name;
 
   @NotNull
-  @Column(unique = true)
   private String path;
+
   private String parentPath;
 
   public AccountGroup(AccountGroup parent, String name) {
